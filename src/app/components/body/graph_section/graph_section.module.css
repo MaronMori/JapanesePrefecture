@@ -23,6 +23,10 @@
   padding-bottom: 10px;
   text-align: center;
 }
+.loading{
+  margin-top: 12px;
+  text-align: center;
+}
 @media (max-width: 600px) {
   .radio_buttons {
     display: flex;

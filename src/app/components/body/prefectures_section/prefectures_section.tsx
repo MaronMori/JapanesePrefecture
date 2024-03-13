@@ -8,7 +8,6 @@ interface Prefecture {
 
 interface Prefectures_section_Props {
   handleSelectPref: (
-    e: React.ChangeEvent<HTMLInputElement>,
     prefName: string,
     prefCode: number,
     isChecked: boolean,
@@ -52,7 +51,6 @@ export const Prefectures_section: React.FC<Prefectures_section_Props> = ({
               id={prefecture.prefName}
               onChange={(e) =>
                 handleSelectPref(
-                  e,
                   prefecture.prefName,
                   prefecture.prefCode,
                   e.target.checked,

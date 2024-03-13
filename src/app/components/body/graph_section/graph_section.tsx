@@ -6,10 +6,14 @@ import Styles from "./graph_section.module.css";
 
 interface Graph_section_props {
   selectPref: SelectPref[];
+  isFetching: boolean;
+  setIsFetching: (argument: boolean) => void;
 }
 
 export const Graph_section: React.FC<Graph_section_props> = ({
   selectPref,
+  isFetching,
+  setIsFetching,
 }) => {
   const [options, setOptions] = useState<Highcharts.Options>();
   const [graphType, setGraphType] = useState(0);
@@ -53,6 +57,7 @@ export const Graph_section: React.FC<Graph_section_props> = ({
         },
       },
     });
+    setIsFetching(false);
   }, [selectPref, graphType]);
 
   const handleSelectGraph = (
@@ -111,6 +116,7 @@ export const Graph_section: React.FC<Graph_section_props> = ({
           </div>
         </div>
       </div>
+      {isFetching && <div className={Styles.loading}>Loading</div>}
       <div className={Styles.graph_section}>
         <HighchartsReact highcharts={Highcharts} options={options} />
       </div>

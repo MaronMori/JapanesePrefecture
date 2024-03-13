@@ -31,12 +31,13 @@ export interface SelectPref {
 
 export const Body = () => {
   const [selectPref, setSelectPref] = useState<SelectPref[]>([]);
+  const [isFetching, setIsFetihng] = useState(false);
   const handleSelectPref = async (
-    e: React.ChangeEvent<HTMLInputElement>,
     prefName: string,
     prefCode: number,
     isCheck: boolean,
   ) => {
+    setIsFetihng(true);
     if (isCheck) {
       try {
         const result = await fetch("api/getPopulation", {
@@ -72,7 +73,11 @@ export const Body = () => {
   return (
     <section className={styles.body}>
       <Prefectures_section handleSelectPref={handleSelectPref} />
-      <Graph_section selectPref={selectPref} />
+      <Graph_section
+        selectPref={selectPref}
+        isFetching={isFetching}
+        setIsFetching={setIsFetihng}
+      />
     </section>
   );
 };

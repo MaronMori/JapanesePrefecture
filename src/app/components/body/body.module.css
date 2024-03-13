@@ -3,6 +3,7 @@
   border: solid 1px black;
   padding: 16px 24px;
 }
+
 @media (max-width: 600px) {
   .body {
     margin: 4px 12px;
