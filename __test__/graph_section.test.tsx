@@ -1,5 +1,5 @@
 import { Graph_section } from "../src/app/components/body/graph_section/graph_section";
-import { SelectPref } from "@/app/components/body/body";
+import { SelectPref } from "../src/app/components/body/body";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 
