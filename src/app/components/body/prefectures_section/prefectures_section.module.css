@@ -1,0 +1,22 @@
+.prefectures {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 12px;
+  row-gap: 12px;
+  padding: 16px 0;
+}
+.prefecture {
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .prefectures {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 12px;
+    row-gap: 12px;
+    padding: 16px 0;
+    max-height: 120px;
+    overflow: scroll;
+  }
+}
