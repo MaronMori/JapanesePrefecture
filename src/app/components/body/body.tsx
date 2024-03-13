@@ -3,7 +3,7 @@
 import { Prefectures_section } from "@/app/components/body/prefectures_section/prefectures_section";
 import { Graph_section } from "@/app/components/body/graph_section/graph_section";
 import styles from "./body.module.css";
-import React, { useState } from "react";
+import { useState } from "react";
 
 interface Population {
   message: boolean;

@@ -27,6 +27,24 @@
   margin-top: 12px;
   text-align: center;
 }
+.reset_button {
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  width: 80px;
+  margin-top: 10px;
+  padding: 10px 12px;
+  font-weight: bold;
+  border: 2px solid black;
+  transition: 0.5s;
+  background-color: #A27B5C;
+}
+.reset_button:hover{
+  color: #fff;
+  border: 2px solid #fff;
+  background: #594545;
+}
 @media (max-width: 600px) {
   .radio_buttons {
     display: flex;

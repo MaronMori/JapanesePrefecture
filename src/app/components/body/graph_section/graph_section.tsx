@@ -120,6 +120,17 @@ export const Graph_section: React.FC<Graph_section_props> = ({
       <div className={Styles.graph_section}>
         <HighchartsReact highcharts={Highcharts} options={options} />
       </div>
+      <div>
+        <button
+          className={Styles.reset_button}
+          type={"button"}
+          onClick={() => {
+            window.location.reload();
+          }}
+        >
+          リセット
+        </button>
+      </div>
     </div>
   );
 };
