@@ -1,22 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { SelectPref } from "../body";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import Styles from "./graph_section.module.css";
+import { useSelectPrefContext } from "../../../provider/select_pref_provider";
 
-interface Graph_section_props {
-  selectPref: SelectPref[];
-  isFetching: boolean;
-  setIsFetching: (argument: boolean) => void;
-}
-
-export const Graph_section: React.FC<Graph_section_props> = ({
-  selectPref,
-  isFetching,
-  setIsFetching,
-}) => {
+export const Graph_section: React.FC = () => {
   const [options, setOptions] = useState<Highcharts.Options>();
   const [graphType, setGraphType] = useState(0);
+  const { selectPref, isFetching, setIsFetching } = useSelectPrefContext();
 
   useEffect(() => {
     const series: Highcharts.SeriesOptionsType[] = [];

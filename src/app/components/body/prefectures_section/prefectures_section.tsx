@@ -1,22 +1,15 @@
 import styles from "./prefectures_section.module.css";
 import React, { useEffect, useState } from "react";
+import { useSelectPrefContext } from "../../../../app/provider/select_pref_provider";
 
 interface Prefecture {
   prefName: string;
   prefCode: number;
 }
 
-interface Prefectures_section_Props {
-  handleSelectPref: (
-    prefName: string,
-    prefCode: number,
-    isChecked: boolean,
-  ) => void;
-}
-export const Prefectures_section: React.FC<Prefectures_section_Props> = ({
-  handleSelectPref,
-}) => {
+export const Prefectures_section: React.FC = () => {
   const [prefectures, setPrefectures] = useState<Prefecture[]>([]);
+  const { handleSelectPref } = useSelectPrefContext();
 
   useEffect(() => {
     async function getPrefectures() {

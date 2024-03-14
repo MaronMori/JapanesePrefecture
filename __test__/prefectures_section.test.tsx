@@ -54,14 +54,12 @@ const expectedPrefectures = [
 
 describe("prefectures_sectionのテスト", () => {
   test("都道府県を取得中の「Loading」が出るか", () => {
-    const mockFunction = jest.fn();
-    render(<Prefectures_section handleSelectPref={mockFunction} />);
+    render(<Prefectures_section />);
     expect(screen.getByText("Loading")).toBeInTheDocument();
   });
 
   test("都道府県を全て取得できたか", () => {
-    const mockFunction = jest.fn();
-    render(<Prefectures_section handleSelectPref={mockFunction} />);
+    render(<Prefectures_section />);
     expectedPrefectures.forEach(async (prefecture) => {
       expect(await screen.findByText(prefecture)).toBeInTheDocument();
     });

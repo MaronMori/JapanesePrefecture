@@ -23,7 +23,7 @@
   padding-bottom: 10px;
   text-align: center;
 }
-.loading{
+.loading {
   margin-top: 12px;
   text-align: center;
 }
@@ -38,9 +38,9 @@
   font-weight: bold;
   border: 2px solid black;
   transition: 0.5s;
-  background-color: #A27B5C;
+  background-color: #a27b5c;
 }
-.reset_button:hover{
+.reset_button:hover {
   color: #fff;
   border: 2px solid #fff;
   background: #594545;
