@@ -1,6 +1,8 @@
 # 都道府県別総人口推移グラフアプリケーション
 ## 公開URL
 [https://japanese-prefecture.vercel.app/]
+## アプリケーション概要
+RESAS APIを使用して都道府県のデータを取得しHighchartsでグラフ表示するアプリケーションです。
 ## 作成期間
 4日
 ## 使用した技術と理由
